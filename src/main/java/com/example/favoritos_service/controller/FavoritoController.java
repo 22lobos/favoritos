@@ -19,13 +19,13 @@ public class FavoritoController {
         this.service = service;
     }
 
-    // PING de prueba: GET /api/favoritos/ping
+    // Ping para probar que el microservicio está arriba
     @GetMapping("/ping")
     public String ping() {
         return "favoritos-ok";
     }
 
-    // GET /api/favoritos   -> todos
+    // GET /api/favoritos
     @GetMapping
     public List<Favorito> listarTodos() {
         return service.listarTodos();
